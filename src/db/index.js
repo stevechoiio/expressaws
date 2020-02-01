@@ -21,14 +21,8 @@ const createCustomerTable = `CREATE TABLE IF NOT EXISTS Customers (
 const pool = new Pool({
   connectionString: connectionString
 });
-pool.query(createAddressTable, (err, res) => {
-  console.log("here");
-  console.log(err);
-});
-pool.query(createCustomerTable, (err, res) => {
-  console.log("here");
-  console.log(err);
-});
+pool.query(createAddressTable, (err, res) => {});
+pool.query(createCustomerTable, (err, res) => {});
 
 module.exports = {
   query: (text, params) => pool.query(text, params)
