@@ -5,8 +5,10 @@ const { createAddressTable, createCustomerTable } = require("../query");
 const pool = new Pool({
   connectionString: connectionString
 });
-pool.query(createAddressTable, (err, res) => {});
-pool.query(createCustomerTable, (err, res) => {});
+//initialize tables if they don't exist in the database
+console.log("connecting to database:", connectionString);
+pool.query(createAddressTable);
+pool.query(createCustomerTable);
 
 module.exports = {
   query: (text, params) => pool.query(text, params)

@@ -3,7 +3,7 @@ const createAddressTable = `
     ID SERIAL,
     CUSTOMER_ID int NOT NULL,
     STREET_ADDRESS VARCHAR (20),
-    POSTAL_CODE VARCHAR (10),
+    POSTAL_CODE VARCHAR (20),
     COUNTRY VARCHAR (2) NOT NULL,
     PRIMARY KEY (ID),
     FOREIGN KEY (CUSTOMER_ID) REFERENCES CUSTOMERS(ID)
@@ -12,7 +12,7 @@ const createAddressTable = `
 const createCustomerTable = `
     CREATE TABLE IF NOT EXISTS Customers (
     ID int NOT NULL,
-    Name VARCHAR (10) NOT NULL,
+    Name VARCHAR (20) NOT NULL,
     PRIMARY KEY (ID)
 );`;
 
