@@ -5,6 +5,7 @@ const randomInt = require("random-int");
 describe("Post Endpoints", () => {
   it("should create a new post", async () => {
     const userId = randomInt(1000);
+
     const postData = await request(app)
       .post(`/customers/${userId}`)
       .send({

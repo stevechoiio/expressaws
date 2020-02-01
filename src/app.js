@@ -5,9 +5,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 mountRoutes(app);
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.get("/", (req, res) => {
-  res.send("The sedulous hyena ate the antelope!");
+  res.send("Welcome to my playground");
 });
 
 app.listen(port, err => {
