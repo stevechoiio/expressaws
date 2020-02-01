@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("../src/app");
 const randomInt = require("random-int");
-
+const faker = require("faker");
 describe("Post Endpoints", () => {
   it("should create a new post", async () => {
     const userId = randomInt(1000);

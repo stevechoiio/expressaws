@@ -15,6 +15,7 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-promise-router": "^3.0.3",
+    "faker": "^4.1.0",
     "knex": "^0.20.8",
     "pg": "^7.18.1",
     "random-int": "^2.0.1",
